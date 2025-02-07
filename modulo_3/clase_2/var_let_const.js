@@ -20,6 +20,9 @@ const c = "constante"
 //const c = "variable" Esta no funcionará
 //c = "variable" Esta tampoco
 
-console.log(c)
+
+variable = "jala" // esto tambien jala
+
+console.log(variable)
 
 
