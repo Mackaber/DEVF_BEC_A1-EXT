@@ -108,5 +108,61 @@ function informal(nombre) {
     return "Compa " + nombre
 }
 
+result = formal("Luis")
+console.log(result)
+
 result = saludar_con_estilo("Mackaber", informal)
 console.log(result)
+
+
+// Usar funciones anonimas
+let mi_nombre = "Mackaber"
+result = saludar_con_estilo(mi_nombre, formal)
+console.log(result)
+
+
+result = saludar_con_estilo(mi_nombre, function(nombre) {
+    return "Hace mucho que no te veía, como te ha ido? " + nombre
+})
+console.log(result)
+
+// Funciones flecha
+
+let mi_var = 5
+
+/*function mi_func() {
+
+
+}*/
+
+/*
+let mi_func = function() {
+
+}
+
+let mi_funct = () => {
+    return 
+}
+
+let mi_funct = (a,b) => a*b
+let mi_funct = a => a*a
+*/
+
+// Ejemplos de funciones flecha
+
+let suma = function(a,b) {
+    return a + b
+}
+
+let resta = (a,b) => {
+    return a - b
+}
+
+let multiplicar = (a,b) => a*b
+
+let al_cuadrado = a => a*a
+
+let operarar = (op, val_a, val_b) => op(val_a, val_b)
+
+
+operarar((a,b) => a + b, 5, 10)
