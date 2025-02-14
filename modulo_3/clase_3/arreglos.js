@@ -37,4 +37,8 @@ funcion_de_mapear = function(elemento) {
 
 let d = c.map(funcion_de_mapear)
 
+c.map(function(elemento) {
+    return elemento * 2
+})
+
 console.log(d)
