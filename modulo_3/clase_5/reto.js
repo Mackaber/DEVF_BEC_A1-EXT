@@ -38,15 +38,20 @@ console.log(marvel_movies["Iron Man"].characters[1].name)
 
 function promedio_personajes(movies) { 
     let total = 0;
+    let total_characters = 0
 
     let movie_names = Object.keys(movies) // ["Iron Man", "Captain America"]
 
     for(let i=0; i<movie_names.length;i++) {
 
-        for(let j=0; j<;j++) {
+        total_characters += movies[movie_names[i]].characters.length
+
+        for(let j=0; j<movies[movie_names[i]].characters.length;j++) {
+            total += movies[movie_names[i]].characters[j].age
            //  total += movies[i]
         }
     }
+    return total / total_characters
 }
 
 console.log(promedio_personajes(marvel_movies))
