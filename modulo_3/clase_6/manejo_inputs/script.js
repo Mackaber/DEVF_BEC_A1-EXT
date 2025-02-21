@@ -9,6 +9,10 @@ button.addEventListener("click", () => {
     console.log("El nombre del usuario es: "  + nombre.value)
 
     result.innerHTML = "Bienvenido " + nombre.value
+
+    // Para poner HTML Debajo y de forma multiple
+    //original_html = result.innerHTML
+    // result.innerHTML += "<p>Hola " + nombre.value + "</p><br>"
 })
 
 
