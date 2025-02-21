@@ -1,16 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <div class="container">
         <!-- Centered button-->
-    <button id="button" class="centered-button">Presioname!</button>
-    <script src="script.js"></script>
+        <button id="button" class="centered_button">Presioname!</button>
+        <div id="result">
+
+        </div>
+
+        <form>
+            <h2>Formulario de ejemplo</h2>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre"><br><br>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" placeholder="Ingrese su apellido"><br><br>
+
+            <label for="email">Correo electrónico:</label>
+            <input type="email" id="email" name="email" placeholder="Ingrese su correo electrónico"><br><br>
+
+            <label for="telefono">Teléfono:</label>
+            <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono"><br><br>
+
+            <label for="contraseña">Contraseña:</label>
+            <input type="password" id="contraseña" name="contraseña" placeholder="Ingrese su contraseña"><br><br>
+
+            <label for="fecha">Fecha de nacimiento:</label>
+            <input type="date" id="fecha" name="fecha"><br><br>
+
+            <label for="hora">Hora:</label>
+            <input type="time" id="hora" name="hora"><br><br>
+
+            <label for="numero">Número:</label>
+            <input type="number" id="numero" name="numero" min="1" max="100"><br><br>
+
+            <label for="url">URL:</label>
+            <input type="url" id="url" name="url" placeholder="Ingrese una URL"><br><br>
+
+            <label for="color">Color:</label>
+            <input type="color" id="color" name="color"><br><br>
+
+            <label for="archivo">Archivo:</label>
+            <input type="file" id="archivo" name="archivo"><br><br>
+
+            <label for="genero">Género:</label>
+            <select id="genero" name="genero">
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+                <option value="otro">Otro</option>
+            </select><br><br>
+
+            <label for="intereses">Intereses:</label>
+            <select id="intereses" name="intereses" multiple>
+                <option value="deportes">Deportes</option>
+                <option value="música">Música</option>
+                <option value="lectura">Lectura</option>
+            </select><br><br>
+
+            <label for="terminos">Acepto los términos y condiciones:</label>
+            <input type="checkbox" id="terminos" name="terminos"><br><br>
+
+            <input type="submit" value="Enviar">
+        </form>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
