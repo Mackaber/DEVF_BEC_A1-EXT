@@ -19,6 +19,16 @@ agregar_button.addEventListener("click", function (event) {
     // Paso 4. Usar createHTMLElement y appendChild
     let element = document.createElement("div")
     element.innerHTML = entry_input.value
+
+    // Paso 5. Crear elemento de botón de eliminar
+    let delete_button = document.createElement("button")
+    delete_button.innerHTML = "x"
+    delete_button.addEventListener("click", function(event) {
+        contenedor.removeChild(element)
+    })
+    element.appendChild(delete_button)
+
+    // Paso 4. cont...
     contenedor.appendChild(element)
     
 })
