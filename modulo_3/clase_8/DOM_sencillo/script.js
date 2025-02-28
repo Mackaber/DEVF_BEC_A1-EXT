@@ -7,6 +7,9 @@ let entry_input = document.getElementById("entry_input")
 // Paso 3.2 Obtener el elemento del contenedor del DOM
 let contenedor = document.getElementById("contenedor")
 
+// Paso 6. (extra) Declaramos una variable para guardar las entradas
+let entries = { contents: [] }
+
 agregar_button.addEventListener("click", function (event) {
     console.log("Botón presionado!")
 
@@ -30,5 +33,13 @@ agregar_button.addEventListener("click", function (event) {
 
     // Paso 4. cont...
     contenedor.appendChild(element)
-    
+
+    // Paso 6. (extra) cont...
+    entries.contents.push(entry_input.value)
+
+    // Paso 7. (extra) Pasarlo a string
+    let entries_JSON = JSON.stringify(entries)
+
+    // Paso 8. (extra) Pasarlo a localStorage
+    localStorage.setItem("entries",entries_JSON)
 })
