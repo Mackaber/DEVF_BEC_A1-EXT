@@ -8,7 +8,7 @@ let grupo_a = {
         },
         {
             nombre: "Ana",
-            calificacion: 8.5
+            calificacion: 10
         },
         {
             nombre: "Luis",
@@ -103,6 +103,22 @@ let escuela =  {
 
 
         // return //...
+
+          // 1.1 de grupos... pasar a alumnos...
+        // 1.1.1 Calcular la sumatoria de cada grupo
+        const sumatorias = this.grupos.map(grupo => {
+            return grupo.alumnos.reduce((acumulador, alumno) => acumulador + alumno.calificacion, 0);
+        });
+
+        // 1.1.2 Calcular el promedio de cada grupo
+        const promedios = sumatorias.map((sumatoria, index) => {
+            return sumatoria / this.grupos[index].alumnos.length;
+        });
+
+        // 1.2 Encontrar el promedio más alto
+        const promedioMasAlto = Math.max(...promedios);
+
+        return promedioMasAlto;
     },
 
 
@@ -137,6 +153,6 @@ let escuela =  {
     }
 }
 
-
+console.log(escuela.promedioMasAlto())
 console.log(escuela.alumnoPaso("Filosofia"))
 console.log(escuela.alumnoSeEncuentraEnGrupo("B", "Hugo"))
