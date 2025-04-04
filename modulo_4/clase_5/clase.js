@@ -46,20 +46,8 @@ console.log(pila.tope()) // peek
 console.log("----------------------")
 // Regresar hasta el último elemento
 function base_de_la_pila(pila) {
-
     let tope
-
-    while(true) {
-
-        tope = pila.pop()
-
-        if(pila.estaVacia()) { // Comprobar si no esta vacia
-
-            break
-        } 
-
-    }
-
+while(!pila.estaVacia()) tope = pila.pop()
     return tope// "Wikipedia"
 }
 
