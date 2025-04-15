@@ -5,14 +5,14 @@
 
 function factorial(x) {
     debugger;
-    if(x === 0) { // Condición de parada | caso base
+    if(x === 0) { // 3. Condición de parada | caso base
         return 1;
     }
-    return x * factorial(x - 1); // Se llama a si misma
+    return x * factorial(x - 1); // 2. Se llama a si misma
 
 }
 
-let total = factorial(5); // Primera llamada
+let total = factorial(5); // 1.  Primera llamada
 console.log(total)
 
 /*
