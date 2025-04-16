@@ -1,0 +1,8 @@
+
+Hoy fue un dia soleado
+Mi gatita hizo muchas travesuras
+
+Esto es un texto de forma mas detallada
+sobre cosas que puedo escribir desde la linea de comandos
+los saltos de linea se respetan
+y todo queda en la variable de texto
