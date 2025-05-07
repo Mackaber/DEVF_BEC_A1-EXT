@@ -5,3 +5,5 @@
 - Relacionar JSON con la estructura de objetos en JS. 
 - Reconocer el problema del 'callback hell'.
 
+![alt text](image.png)
+
