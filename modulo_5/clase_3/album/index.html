@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir fotos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Subir fotos</h1>
+        <form id="upload-form">
+            <label for="title">Título:</label>
+            <input type="text" id="title" name="title"><br><br>
+            <div class="drop-zone">
+                <p>Arrastra y suelta tu foto aquí o haz clic para seleccionar</p>
+                <input type="file" id="file-input" name="file" accept="image/*">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Drag and drop
+        const dropZone = document.querySelector('.drop-zone');
+        const fileInput = document.querySelector('#file-input');
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('hover');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('hover');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            const files = e.dataTransfer.files;
+            fileInput.files = files;
+            dropZone.classList.remove('hover');
+        });
+    </script>
+</body>
+</html>
