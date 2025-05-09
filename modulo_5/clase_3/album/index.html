@@ -15,7 +15,9 @@
             <div class="drop-zone">
                 <p>Arrastra y suelta tu foto aquí o haz clic para seleccionar</p>
                 <input type="file" id="file-input" name="file" accept="image/*">
+                <img id="preview" src="" alt="Imagen previa">
             </div>
+            <button type="submit">Enviar</button>
         </form>
     </div>
 
@@ -23,6 +25,7 @@
         // Drag and drop
         const dropZone = document.querySelector('.drop-zone');
         const fileInput = document.querySelector('#file-input');
+        const preview = document.querySelector('#preview');
 
         dropZone.addEventListener('dragover', (e) => {
             e.preventDefault();
@@ -38,7 +41,21 @@
             const files = e.dataTransfer.files;
             fileInput.files = files;
             dropZone.classList.remove('hover');
+            previewImage();
         });
+
+        fileInput.addEventListener('change', () => {
+            previewImage();
+        });
+
+        function previewImage() {
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                preview.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
     </script>
 </body>
 </html>
