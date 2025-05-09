@@ -21,6 +21,7 @@
             <div class="drop-zone">
                 <p>Arrastra y suelta tu foto aquí o haz clic para seleccionar</p>
                 <input type="file" id="file-input" name="file" accept="image/*">
+                <input type="hidden" id="imageBase64" name="imageBase64">
                 <img id="preview" src="" alt="Imagen previa">
             </div>
             <button type="submit">Enviar</button>
@@ -33,6 +34,7 @@
         const dropZone = document.querySelector('.drop-zone');
         const fileInput = document.querySelector('#file-input');
         const preview = document.querySelector('#preview');
+        const imageBase64 = document.querySelector('#imageBase64');
 
         dropZone.addEventListener('dragover', (e) => {
             e.preventDefault();
@@ -58,8 +60,10 @@
         function previewImage() {
             const file = fileInput.files[0];
             const reader = new FileReader();
+
             reader.onload = (e) => {
                 preview.src = e.target.result;
+                imageBase64.value = e.target.result
             };
             reader.readAsDataURL(file);
         }

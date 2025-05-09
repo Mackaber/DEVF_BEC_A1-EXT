@@ -4,6 +4,7 @@ const renderImage = (imageObject) => {
     return `
         <div>
             <h4>${imageObject.titulo}</h4>
+            <img src=${imageObject.foto} />
         </div>
     `
 }
@@ -31,10 +32,12 @@ uploadForm.addEventListener("submit", (e) => {
     e.preventDefault()
 
     console.log(e.target.title.value)
+    console.log(e.target.imageBase64.value)
 
     const raw = JSON.stringify({
         id: "=ROW()",
-        titulo: e.target.title.value
+        titulo: e.target.title.value,
+        foto: e.target.imageBase64.value
     })
 
     const myHeaders = new Headers();
