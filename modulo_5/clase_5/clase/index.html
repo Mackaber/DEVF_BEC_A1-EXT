@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Formularios con JS</h1>
+
+<!-- 1. Input sólo -->
+<input id="basic_input" />
+<button id="print_console_btn">Imprimir en consola</button>
+
+<br>
+<br>
+
+<!-- 2. Usando formulatio -->
+<form id="basic_form">
+    <input name="form_input" id="form_input"/>
+    <input type="submit" value="Imprimir en consola"/>
+</form>
+
+<br>
+<br>
+
+<!-- Validación con JS Nativo -->
+<form id="calc_form">
+    Numero 1: <input type="text" name="number_1" id="number_1"><br> 
+    + <br>
+    Numero 2: <input type="text" name="number_2" id="number_2"><br><br>
+    <input type="submit" value="calcular">
+</form>
+
+<br>
+<br>
+
+<!-- Validación de email con JS Nativo -->
+<form id="login_form">
+    Email: <input type="text" name="email" id="email"><br>
+    <p id="email_error" style="display: none; color: red;"></p> 
+    <br>
+    Passwod: <input type="text" name="password" id="password"><br><br>
+    <p id="password_error" style="display: none; color: red;"></p> 
+
+    <input type="submit" value="login">
+</form>
+
+
+
+<script  src="script.js"></script>     
+</body>
+</html>
