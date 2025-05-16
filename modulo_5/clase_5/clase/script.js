@@ -7,6 +7,8 @@ const calc_form = document.getElementById("calc_form")
 const login_form = document.getElementById("login_form")
 const email_error = document.getElementById("email_error")
 
+const input_prueba = document.getElementById("input_prueba")
+
 // x@mackabe.me
 const validEmail = (email) => {
     const incluye_arroba = email.includes("@") 
@@ -74,7 +76,7 @@ login_form.addEventListener("submit",(ev) => {
 
 
     // debugger
-
+d
     // Validación
     if(validEmail(email)) {
         console.log("Bienvenido")
@@ -84,4 +86,16 @@ login_form.addEventListener("submit",(ev) => {
         email_error.style.display = "block"
         email_error.innerHTML = "Correo inválido"
     }
+})
+
+input_prueba.addEventListener("change", () => {
+    console.log("El input de prueba tuvo el evento change")
+})
+
+input_prueba.addEventListener("keyup", () => {
+    console.log("El input de prueba tuvo el evento keyup")
+})
+
+input_prueba.addEventListener("keydown", () => {
+    console.log("El input de prueba tuvo el evento keydown")
 })
