@@ -76,7 +76,7 @@ login_form.addEventListener("submit",(ev) => {
 
 
     // debugger
-d
+
     // Validación
     if(validEmail(email)) {
         console.log("Bienvenido")

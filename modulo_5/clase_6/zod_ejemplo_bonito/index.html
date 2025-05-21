@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Registro - YourEvent</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="form-container">
+    <header>
+      <h1 class="logo">🎖️ <span>YourEvent</span></h1>
+      <div class="subtitle">Online Registration</div>
+    </header>
+    <form>
+      <label>
+        Nombre
+        <input type="text" placeholder="Nombre" required />
+        <p class="error"></p>
+      </label>
+      <label>
+        Edad
+        <input type="number" placeholder="Edad" min="0" required />
+        <p class="error"></p>
+      </label>
+      <label>
+        Email
+        <input type="email" placeholder="Correo Electrónico" required />
+        <p class="error"></p>
+      </label>
+      <label>
+        Celular
+        <input type="tel" placeholder="Número de Celular" required />
+        <p class="error"></p>
+      </label>
+    </form>
+  </div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>

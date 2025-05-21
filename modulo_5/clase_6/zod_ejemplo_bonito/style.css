@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+  }
+  
+  .form-container {
+    background-color: #fff;
+    padding: 40px 30px;
+    width: 400px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  .logo {
+    margin: 0;
+    font-size: 24px;
+    color: #27ae60;
+  }
+  
+  .logo span {
+    font-weight: bold;
+  }
+  
+  .subtitle {
+    background-color: #eafaf1;
+    color: #333;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 16px;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: #444;
+  }
+  
+  input {
+    width: 85%;
+    padding: 10px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    margin-top: 5px;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus {
+    border-color: #27ae60;
+    outline: none;
+  }
+
+/* Agrega esto a tu style.css */
+.error {
+  color: red;
+  font-size: 0.9em;
+}
