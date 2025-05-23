@@ -1,0 +1,16 @@
+{
+  "name": "ejemplo_npm",
+  "version": "1.0.0",
+  "description": "Ejemplo de como usar NPM",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "ejemplo",
+    "educacion",
+    "test"
+  ],
+  "author": "Mackaber",
+  "license": "MIT"
+}
