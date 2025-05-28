@@ -8,5 +8,19 @@
     - Manager: Administrador
 
 - Inicializar un proyecto con npm.
+
+```bash
+    npm init
+```
+
 - Instalar y usar paquetes desde npm.
+
+```bash
+    npm install <paquete>
+```
+
 - Correr scripts desde la terminal.
+ ```
+    npm start
+    npm run otro
+ ```

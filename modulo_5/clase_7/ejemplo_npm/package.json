@@ -12,5 +12,8 @@
     "test"
   ],
   "author": "Mackaber",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "prompt-sync": "^4.2.0"
+  }
 }
