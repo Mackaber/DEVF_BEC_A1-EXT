@@ -1,11 +1,12 @@
 import axios from 'axios'
+import insertCharacter from './insertCharacter'
 const getCharacters = async () => {
     let characters = []
   
     for(let i=1;i<10;i++) {
       //await axios.request(config)
       const response = await axios.get(`https://swapi.tech/api/people/${i}`)
-      characters.push(response.data.result.properties)
+      insertCharacter(response.data.result.properties)
     }
     
     return characters

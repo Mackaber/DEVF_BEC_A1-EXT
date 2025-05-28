@@ -1,5 +1,5 @@
 import tableRow from './tableRow'
-const table = (characters) => {
+const table = () => {
     return `
     <table>
         <thead>
@@ -13,8 +13,8 @@ const table = (characters) => {
             Birthday
             </th>
         </thead>
-        <tbody>
-            ${characters.map((characters) => tableRow(characters)).join("") }
+        <tbody id="tbody">
+            ${/*characters.map((characters) => tableRow(characters)).join("") */ ""}
         </tbody>
     </table>
     `
