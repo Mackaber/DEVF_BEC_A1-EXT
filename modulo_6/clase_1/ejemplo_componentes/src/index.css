@@ -1,0 +1,20 @@
+header {
+  position: relative;
+  width: 100%;
+  min-height: 50px;
+  background-color: #eaeaea;
+}
+
+header h1 {
+    text-align: center;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #eaeaea;
+  text-align: center;
+  padding: 10px 0;
+}

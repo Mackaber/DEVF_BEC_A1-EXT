@@ -1,0 +1,14 @@
+body {
+  font-family: Arial, Helvetica, sans-serif
+}
+
+header {
+  position: relative;
+  width: 100%;
+  min-height: 50px;
+  background-color: #eaeaea;
+}
+
+header h1 {
+    text-align: center;
+}
