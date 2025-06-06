@@ -1,0 +1,20 @@
+.song-item {
+    padding: 16px;
+    border-bottom: 1px solid #222;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: transparent;
+}
+
+.song-title {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #1db954;
+}
+
+.song-artist,
+.song-album {
+    font-size: 0.95rem;
+    color: #b3b3b3;
+}

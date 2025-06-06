@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-      <Header name="Mackaber" />
+      <Header name="Mackaber" color="red" />
       <Content user={user} />
     </>
   )
