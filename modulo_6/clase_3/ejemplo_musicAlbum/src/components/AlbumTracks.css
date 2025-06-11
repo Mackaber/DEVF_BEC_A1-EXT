@@ -1,0 +1,27 @@
+.album-tracks {
+    background: #222;
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0 2px 12px #0004;
+}
+
+.album-tracks__track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #333;
+}
+
+.album-tracks__track:last-child {
+    border-bottom: none;
+}
+
+.album-tracks__name {
+    font-size: 1.1rem;
+}
+
+.album-tracks__duration {
+    color: #b3b3b3;
+    font-variant-numeric: tabular-nums;
+}

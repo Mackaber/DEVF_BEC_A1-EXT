@@ -1,0 +1,25 @@
+.album-title {
+    min-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.album-title__image {
+    width: 220px;
+    height: 220px;
+    border-radius: 8px;
+    box-shadow: 0 4px 24px #000a;
+}
+
+.album-title__name {
+    margin: 24px 0 8px 0;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.album-title__duration {
+    color: #b3b3b3;
+    font-size: 1rem;
+}

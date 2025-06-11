@@ -1,0 +1,13 @@
+.container-spotify {
+    display: flex;
+    align-items: flex-start;
+    background: #181818;
+    color: #fff;
+    min-height: 100vh;
+    padding: 40px;
+}
+
+.container-tracks {
+    margin-left: 40px;
+    flex: 1;
+}
