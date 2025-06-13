@@ -1,0 +1,29 @@
+.todoitem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255,255,255,0.22);
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  box-shadow: 0 2px 8px rgba(140,0,255,0.07);
+  font-size: 1rem;
+  color: #333;
+}
+
+.todoitem-delete {
+  background: linear-gradient(90deg, #ff4e50 0%, #8f2fff 100%);
+  border: none;
+  border-radius: 50%;
+  color: #fff;
+  width: 2rem;
+  height: 2rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.todoitem-delete:hover {
+  background: linear-gradient(90deg, #ff4e50 20%, #8f2fff 80%);
+  transform: scale(1.1);
+}

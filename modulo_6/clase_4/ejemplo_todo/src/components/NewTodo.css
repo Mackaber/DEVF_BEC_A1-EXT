@@ -1,0 +1,37 @@
+.newtodo-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.newtodo-input {
+  background: rgba(255,255,255,0.35);
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1rem;
+  margin-right: 0.5rem;
+  font-size: 1rem;
+  color: #333;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(140,0,255,0.08);
+  transition: background 0.2s;
+}
+
+.newtodo-input:focus {
+  background: rgba(255,255,255,0.55);
+}
+
+.newtodo-btn {
+  background: linear-gradient(90deg, #ff4e50 0%, #8f2fff 100%);
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(140,0,255,0.12);
+  transition: background 0.2s, transform 0.1s;
+}
+
+.newtodo-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #ff4e50 20%, #8f2fff 80%);
+}

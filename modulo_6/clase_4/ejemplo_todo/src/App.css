@@ -1,0 +1,23 @@
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  /* Degradado fluido de rojo a morado */
+  background: linear-gradient(120deg, #ff4e50 0%, #8f2fff 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.glass-container {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 2rem 3rem;
+  min-width: 350px;
+  max-width: 90vw;
+}

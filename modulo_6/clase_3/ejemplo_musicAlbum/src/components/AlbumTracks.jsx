@@ -13,7 +13,7 @@ export default function AlbumTracks({ tracks }) {
 
     return (
         <div className="album-tracks">
-            {tracksWithMins.map(({idTrack, strTrack, intDuration}, idx) => 
+            {tracksWithMins.map(({idTrack, strTrack, intDuration}) => 
                 <div 
                     key={idTrack}
                     className="album-tracks__track"
