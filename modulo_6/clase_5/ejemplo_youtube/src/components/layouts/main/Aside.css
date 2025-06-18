@@ -1,0 +1,26 @@
+.drawer-aside {
+    /* position: fixed; */
+    /* left: 0; */
+    /* top: 0; */
+    height: 100%;
+    width: 240px;
+    background: #fff;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+}
+
+.drawer-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    padding: 16px 0;
+    gap: 16px;
+}
+
+.aside-section {
+    padding: 16px 24px;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
