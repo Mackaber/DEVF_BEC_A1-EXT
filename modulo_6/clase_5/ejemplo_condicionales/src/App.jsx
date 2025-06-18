@@ -34,7 +34,7 @@ function App() {
       </select>
       <Switch {...{color}} />
       <hr />
-      {}
+      {colorMap[color]} 
     </>  
   )}
 
