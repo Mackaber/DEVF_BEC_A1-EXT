@@ -1,0 +1,35 @@
+.post-container {
+    border: 1px solid #e1e8ed;
+    border-radius: 10px;
+    padding: 16px;
+    margin-bottom: 16px;
+    background: #fff;
+    display: flex;
+    max-width: 500px;
+}
+
+.post-avatar {
+    margin-right: 12px;
+}
+
+.post-avatar-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-content {
+    flex: 1;
+}
+
+.post-username {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.post-text {
+    font-size: 15px;
+    color: #14171a;
+}

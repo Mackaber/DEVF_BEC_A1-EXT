@@ -1,7 +1,7 @@
 import axios from 'axios'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import SongTable from '../component/SongTable'
+import SongTable from '../components/SongTable'
 export default function Album() {
     const [songs, setSongs] = useState([])
     const [name, setName] = useState("")
