@@ -1,0 +1,9 @@
+.app {
+  display: flex;
+  flex-direction: row;
+}
+
+div {
+  min-width: 200px;
+  margin: 20px;
+}
