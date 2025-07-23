@@ -1,7 +1,5 @@
-import { useCallback, useContext, useState } from 'react'
+import { useContext, useEffect } from 'react'
 import axios from 'axios'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Conversation from './components/Conversation'
 import Input from './components/Input'
@@ -16,7 +14,7 @@ const mock_messages = [
 
 
 function App() {
-  const { messages, dispatch } = useContext(ConversationContext)
+  const { messages, setMessages, loadMessages, updateMessages } = useContext(ConversationContext)
 
   async function sendMessage(input) {
     console.log("Enviando mensaje", input)
@@ -28,7 +26,7 @@ function App() {
     setMessages(new_messages)
     */
 
-    dispatch([...messages, { content: input, role: "user" }])
+    setMessages([...messages, { content: input, role: "user" }])
 
     // fetch
 
@@ -49,10 +47,15 @@ function App() {
 
     const respuesta = await axios.post("http://localhost:11434/api/chat", data)
 
-    console.log(respuesta.data.message)
+    setMessages([...messages, { content: input, role: "user" } ,respuesta.data.message])
+    updateMessages()
 
-    dispatch([...messages, respuesta.data.message])
+    console.log(respuesta.data.message)
   }
+
+  useEffect(() => {
+    loadMessages()
+  }, [])
 
   return (
     <>

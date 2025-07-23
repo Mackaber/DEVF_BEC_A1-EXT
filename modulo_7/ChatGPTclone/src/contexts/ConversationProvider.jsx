@@ -1,24 +1,25 @@
-import { useCallback, useReducer } from "react";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 
 const ConversationContext = createContext()
 
 function ConversationProvider({ children }) {
+    const [messages, setMessages] = useState([])
 
-    // LocalStorage
-    const [messages, dispatch] = useReducer(reducer, initialState, () => {
-        const conversationJSON = localStorage.getItem('conversation')
-        return conversationJSON ? JSON.parse(conversationJSON) : []
-    })
+    function loadMessages() {
+        const storedMessages = localStorage.getItem('conversation')
+        if (storedMessages) {
+            setMessages(JSON.parse(storedMessages))
+        }
+    }
 
     // Guardar mensajes cada vez que cambian
-    useEffect(() => {
+    function updateMessages() {
         localStorage.setItem('conversation', JSON.stringify(messages))
-    }, [messages])
+    }
 
     return (
-        <ConversationContext.Provider value={{ messages, dispatch }} >
+        <ConversationContext.Provider value={{ messages, setMessages, loadMessages, updateMessages }} >
             {children}
         </ConversationContext.Provider>
     )
