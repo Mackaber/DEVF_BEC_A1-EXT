@@ -1,9 +1,9 @@
 import { useContext, useEffect } from 'react'
 import axios from 'axios'
-import './App.css'
 import Conversation from './components/Conversation'
 import Input from './components/Input'
 import { ConversationContext } from './contexts/ConversationProvider'
+import './App.css'
 
 const mock_messages = [
   { content: "Hola", role: "user" },
@@ -58,10 +58,10 @@ function App() {
   }, [])
 
   return (
-    <>
+    <div className='flex items-center justify-center flex-col min-h-screen'>
       <Conversation messages={messages}/>
       <Input sendMessage={sendMessage} />
-    </>
+    </div>
   )
 }
 
