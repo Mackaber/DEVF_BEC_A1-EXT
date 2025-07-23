@@ -1,8 +1,11 @@
-import { useState } from 'react'
+import { useCallback, useContext, useState } from 'react'
 import axios from 'axios'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
+import Conversation from './components/Conversation'
+import Input from './components/Input'
+import { ConversationContext } from './contexts/ConversationProvider'
 
 const mock_messages = [
   { content: "Hola", role: "user" },
@@ -13,10 +16,9 @@ const mock_messages = [
 
 
 function App() {
-  const [input, setInput] = useState('')
-  const [messages, setMessages] = useState(mock_messages)
+  const { messages, dispatch } = useContext(ConversationContext)
 
-  async function sendMessage() {
+  async function sendMessage(input) {
     console.log("Enviando mensaje", input)
 
     /* Paso por paso...
@@ -26,7 +28,7 @@ function App() {
     setMessages(new_messages)
     */
 
-    setMessages((prev) => [...prev, { content: input, role: "user" }])
+    dispatch([...messages, { content: input, role: "user" }])
 
     // fetch
 
@@ -49,18 +51,13 @@ function App() {
 
     console.log(respuesta.data.message)
 
-    setMessages((prev) => [...prev, respuesta.data.message])
+    dispatch([...messages, respuesta.data.message])
   }
 
   return (
     <>
-
-      <div>
-        {messages.map((message, i) => <p key={i} style={message.role == 'user' ? { color: 'blue' } : { color: 'red' }}>{message.content}</p>)}
-      </div>
-
-      <input onChange={(e) => setInput(e.target.value)} />
-      <button onClick={sendMessage}>Enviar</button>
+      <Conversation messages={messages}/>
+      <Input sendMessage={sendMessage} />
     </>
   )
 }
