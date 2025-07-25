@@ -42,6 +42,7 @@ server.post("/calcular", (req, res) => {
 })
 
 // Query params
+// /calcular?operation=restar&valA=1&valB=2
 server.get("/calcular",(req, res) => {
     const operation = req.query.operation
     const A = Number(req.query.valA)
