@@ -13,6 +13,7 @@ function addRoutes(api, data) {
     // Obtener todos los restaurantes
     api.get('/restaurants', (req, res) => {
         // res.send("Obtener todos los restaurantes")
+        res.status(200) // 200: OK
         res.json(data)
     })
 
@@ -20,9 +21,19 @@ function addRoutes(api, data) {
     api.post('/restaurants', (req, res) => {
         let restaurant = req.body
         restaurant.id = data[data.length - 1].id + 1 // Checar el id del último restaurant + 1
-
         data.push(restaurant)
-        res.json(restaurant)
+        
+        // Validación: Nombre Restaurante > 10 caracteres
+        const valid = restaurant.name.length < 10
+
+        if(valid) {
+            res.status(201) // 201: Created
+            res.json(restaurant)
+        } else {
+            res.status(400)
+            res.send("El nombre del restaurante es muy largo")
+        }
+
     })
 
     // Obtener un restaurant específico
@@ -31,8 +42,14 @@ function addRoutes(api, data) {
 
         const restaurant = obtenerRestaurante(req.params.id)
         //data.fiter((restaurant) => restaurant.id == req.params.id -1)[0]
+        if(restaurant) {
+            res.status(200)
+            res.json(restaurant)
+        } else {
+            res.status(404)
+            res.send("No se encontro el restaurante")
+        }
 
-        res.json(restaurant)
     })
 
     // Modificar un restaurant específico
@@ -51,7 +68,13 @@ function addRoutes(api, data) {
             restaurant[attr] = req.body[attr]
         })
 
-        res.json(restaurant)
+        if(restaurant) {
+            res.status(202) // 202: Accepted
+            res.json(restaurant)
+        } else {
+            res.status(404)
+            res.send("No se encontro el restaurante")
+        }
     })
 
     // Modificar un atributo específico del restaurant específico
@@ -65,14 +88,29 @@ function addRoutes(api, data) {
             restaurant[attr] = req.body[attr]
         })
 
-       restaurant
+        if(restaurant) {
+            res.status(202) // 202: Accepted
+            res.json(restaurant)
+        } else {
+            res.status(404)
+            res.send("No se encontro el restaurante")
+        }
     })
 
     // Borrar un restaurant específico
     api.delete('/restaurants/:id', (req, res) => {
         borrarRestaurante(req.params.id)
         // res.send(`Borrar el restaurante ${req.params.id}`)
-        res.send(`Se borró correctamente el restaurant ${req.params.id}`)
+
+        if(restaurant) {
+            res.status(204) // 204: No content
+            res.send()
+        } else {
+            res.status(404)
+            res.send("No se encontro el restaurante")
+        }
+
+        // res.send(`Se borró correctamente el restaurant ${req.params.id}`)
     })
 }
 
